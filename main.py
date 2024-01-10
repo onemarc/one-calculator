@@ -1,12 +1,13 @@
 import sys
+import config
+
 from typing import Union, Optional
 from operator import add, sub, mul, truediv
 
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtGui import QFontDatabase
-
 from design import Ui_MainWindow
-import config
+
 
 operations = {
     '+': add,
@@ -14,7 +15,6 @@ operations = {
     '×': mul,
     '/': truediv
 }
-
 
 class Calculator(QMainWindow):
     def __init__(self):
